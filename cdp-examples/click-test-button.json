@@ -1,0 +1,24 @@
+{
+  "name": "click-test-button",
+  "description": "Demo script that clicks the 'Click Me' button on the test server",
+  "author": "Robert Dev Team",
+  "tags": ["demo", "test", "click"],
+  "cdp_commands": [
+    {
+      "method": "Runtime.evaluate",
+      "params": {
+        "expression": "document.getElementById('test-button').click()",
+        "returnByValue": true
+      },
+      "description": "Click the 'Click Me' button by ID"
+    },
+    {
+      "method": "Runtime.evaluate",
+      "params": {
+        "expression": "document.getElementById('output').innerText",
+        "returnByValue": true
+      },
+      "description": "Read the output text to verify the click worked"
+    }
+  ]
+}

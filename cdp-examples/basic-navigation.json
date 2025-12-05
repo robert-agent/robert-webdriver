@@ -1,0 +1,25 @@
+{
+  "name": "basic-navigation",
+  "description": "Navigate to example.com and take a screenshot",
+  "created": "2025-10-09T00:00:00Z",
+  "author": "Claude",
+  "tags": ["example", "basic"],
+  "cdp_commands": [
+    {
+      "method": "Page.navigate",
+      "params": {
+        "url": "https://example.com"
+      },
+      "description": "Navigate to example.com"
+    },
+    {
+      "method": "Page.captureScreenshot",
+      "params": {
+        "format": "png",
+        "captureBeyondViewport": true
+      },
+      "save_as": "example-homepage.png",
+      "description": "Capture full page screenshot"
+    }
+  ]
+}
